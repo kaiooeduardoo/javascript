@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color: rgba(182, 175, 175, 0.651);
+            font: normal 20pt arial;
+            position: relative;
+        }
+        header {
+            background-image: linear-gradient(to right, #4949ac, rgb(127, 127, 196), rgb(73, 73, 168));
+            box-shadow: 0px 4px 4px 0px rgba(66, 66, 172, 0.527);
+            height: 100px;
+            
+        }
+        h1 {            
+            color: white;
+            padding: 20px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.514);
+            text-align: center;
+
+        }
+        main {
+            background-color: honeydew;
+            font: bold 1em sans-serif;
+            text-align: center;
+            text-indent: 30px;
+            /*text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.233);*/
+            width: 450px;
+            height: 700px;
+            padding: 10px;
+            margin: auto;
+            margin-top: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.397);
+            border-radius: 10px;
+           
+        }
+        main > article {
+            background-color: #6e86d66e;
+            font-size: 16px;
+            text-align: justify;
+            padding: 10px;
+            margin: 10px;
+            /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.397);*/
+            border-radius: 10px;
+        }
+        main > section {
+            background-color: #eeffcca9;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.397);
+            border-radius: 10px;
+        }
+        footer {
+            background-image: linear-gradient(to top, black, rgba(34, 32, 32, 0.589));
+            color: white;
+            text-align: center;
+            font-size: 0.8em;
+            padding: 20px 0px 20px 0px;
+            position: relative;
+            bottom: 0px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript</h1>
+    </header>
+
+    <main>
+       
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga voluptatibus culpa fugiat sit ea ipsam magni. Facere quam labore mollitia iste, suscipit pariatur, cumque provident officiis perferendis quis quidem?.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi earum voluptate temporibus! Deserunt minus laborum aliquid consectetur suscipit optio repellendus consequuntur recusandae quod temporibus. Iusto ut excepturi et quia consectetur.</p>
+        </article>
+        <section>
+            <p>Section </p>
+        </section>
+        
+    </main>
+    <footer>
+        <p>Desenvolvido por Kaio Eduardo.</p>
+    </footer>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: ')) //converter de string para número
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}.`)
+    </script>
+</body>
+</html>

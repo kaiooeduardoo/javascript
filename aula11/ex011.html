@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html {
+            background-image: linear-gradient(45deg, red, black);
+            height: 100vh;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            padding: 1em;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.562);
+        }
+        p {
+            color: white;
+            font-weight: bolder;
+            font-size: 1.5em;
+            margin-left: 10px;
+        }
+        #txtnac {
+            color: blue;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #btn {
+            color: rgb(189, 21, 21);
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.63);
+        }
+        #btn:hover {
+            color: white;
+            background-color: rgb(189, 21, 21);
+        }
+        div#res {
+            color: white;
+            padding-top: 40px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar se você é Brasileiro ou Estrangeiro</h1>
+
+    <p>  Qual seu pais? 
+        <input type="text" name="pais" id="pais" placeholder="Ex: Brasil"> <!--Aqui é a caixa de texto-->
+        <input type="button" value="Verificar" id="btn" onclick="clicar()"> <!--Aqui é o botão para clicar-->
+    </p>
+
+    <div id="res">Resultado: </div>
+    
+    <script>
+        function clicar() {
+            /*Aqui é a declaração das variáveis*/
+
+            let paisp = document.getElementById('pais')
+            let res = document.getElementById('res')
+            let condicional = String(paisp.value).toLocaleLowerCase() 
+
+            /*Aqui é a frase que vai aparecer antes do resultado*/
+            res.innerHTML += `Seu país é o ${condicional}<br><br>`
+           
+            /*Aqui é só estilização do resultado*/
+            res.style.background = 'black'
+            res.style.width = '300px'
+            res.style.height = '50px'
+            res.style.borderRadius = '10px'
+            res.style.padding = '10px'
+            res.style.textShadow = '1px 1px 1px black'
+            res.style.boxShadow = '2px 2px 2px black'
+           
+            /*Aqui é a condição da nacionalidade*/
+            if(condicional == 'Brasil') {
+                res.innerHTML += 'Você é Brasileiro'
+            } else {
+                res.innerHTML += 'Você é Estrangeiro'
+            }
+        }           
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Javascript</h1>
+    <form>
+        <table>
+            <tr>
+                <th colspan="5">Calculadora JavaScript</th>
+            </tr>
+            <tr>
+                <td>val1 <input type="text" name="val1" id="val1"></td>
+                <td>
+                    <select name="sinal" id="sinal">
+                        <option value="escolha" selected>Escolha</option>
+                        <option value="somar">+ Somar</option>
+                        <option value="subtrair">- Subtrair</option>
+                        <option value="dividir">÷ Dividir</option>
+                        <option value="multiplicar">x Multiplicar</option>
+                    </select>
+                </td>
+                <td>val2 <input type="text" name="val2" id="val2"></td>
+                <td><input type="button" value="=" onclick="calcular();" name=""></td>
+                <td><input type="text" name="val1" id="result"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function calcular() {
+            let val1   = Number(document.getElementById('val1').value);
+            let val2   = Number(document.getElementById('val2').value);
+            let sinal  = document.getElementById('sinal').value;
+            let result = document.getElementById('result');
+
+            if(sinal=="somar") {
+                result.value = val1 + val2;
+            }
+            if(sinal=="subtrair") {
+                result.value = val1 - val2;
+            }
+            if(sinal=="dividir") {
+                result.value = val1 / val2;
+            }
+            if(sinal=="multiplicar") {
+                result.value = val1 * val2;
+            } 
+            if(sinal=="escolha") {
+                result.value = 'Escolha uma operação'
+            }
+            
+        }
+    </script>
+</body>
+</html>
